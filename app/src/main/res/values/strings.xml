@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MoviePedia</string>
+    <string name="bottom_menu_home">Home</string>
+    <string name="bottom_menu_search">Search</string>
+    <string name="bottom_menu_myList">My List</string>
+    <string name="bottom_menu_profile">My Profile</string>
+
+</resources>
