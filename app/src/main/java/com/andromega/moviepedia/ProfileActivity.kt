@@ -21,7 +21,7 @@ class ProfileActivity : AppCompatActivity() {
     }
     fun addingActivitiesToBottomMenu(){
 
-        bottomNavigation.selectedItemId = R.id.bottom_menu_home
+        bottomNavigation.selectedItemId = R.id.bottom_menu_profile
 
         bottomNavigation.setOnNavigationItemSelectedListener {
             when(it.itemId){

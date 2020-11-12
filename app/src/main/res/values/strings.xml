@@ -1,8 +1,21 @@
 <resources>
     <string name="app_name">MoviePedia</string>
+
     <string name="bottom_menu_home">Home</string>
     <string name="bottom_menu_search">Search</string>
     <string name="bottom_menu_myList">My List</string>
     <string name="bottom_menu_profile">My Profile</string>
+
+    <string name="tablayout_movies">Movies</string>
+    <string name="tablayout_tvSeries">Tv Series</string>
+    <string name="tablayout_kids">Kids</string>
+
+    <string name="movies_fragment_go_button">GO TO MOVIE INFO</string>
+
+    <string name="special_videos_textview">Special Videos</string>
+
+    <string name="newcoming_videos_textview">New Coming Movies</string>
+
+    <string name="action_videos_textview">Action Movies</string>
 
 </resources>
