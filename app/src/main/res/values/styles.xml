@@ -7,4 +7,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="FragmentTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 </resources>

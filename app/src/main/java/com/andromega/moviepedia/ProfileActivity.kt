@@ -28,19 +28,19 @@ class ProfileActivity : AppCompatActivity() {
                 R.id.bottom_menu_home -> {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
-                    Toast.makeText(this, "profile", Toast.LENGTH_LONG).show()
+                    //Toast.makeText(this, "profile", Toast.LENGTH_LONG).show()
                     finish()
                 }
                 R.id.bottom_menu_search -> {
                     val intent = Intent(this, SearchActivity::class.java)
                     startActivity(intent)
-                    Toast.makeText(this, "search", Toast.LENGTH_LONG).show()
+                    //Toast.makeText(this, "search", Toast.LENGTH_LONG).show()
                     finish()
                 }
                 R.id.bottom_menu_myList -> {
                     val intent = Intent(this, MyListActivity::class.java)
                     startActivity(intent)
-                    Toast.makeText(this, "List", Toast.LENGTH_LONG).show()
+                    //Toast.makeText(this, "List", Toast.LENGTH_LONG).show()
                     finish()
                 }
                 R.id.bottom_menu_profile -> {

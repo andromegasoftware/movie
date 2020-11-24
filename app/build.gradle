@@ -3,12 +3,19 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.andromega.moviepedia"
-        minSdkVersion 21
+        minSdkVersion 27
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -41,4 +48,13 @@ dependencies {
 
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //retrofit library to take data from restAPI
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+
+    //youtube player api library
+    implementation files('libs/YouTubeAndroidPlayerApi')
+
+
 }

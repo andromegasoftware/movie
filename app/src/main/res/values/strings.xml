@@ -12,10 +12,53 @@
 
     <string name="movies_fragment_go_button">GO TO MOVIE INFO</string>
 
-    <string name="special_videos_textview">Special Videos</string>
+    <string name="special_videos_textview">Top Rated Movies</string>
 
-    <string name="newcoming_videos_textview">New Coming Movies</string>
+    <string name="newcoming_videos_textview">Popular Movies</string>
 
     <string name="action_videos_textview">Action Movies</string>
+
+    <string name="science_fiction_videos_textview">Science Fiction Movies</string>
+
+    <string name="family_videos_textview">Family Movies</string>
+
+    <string name="comedy_videos_textview">Comedy Movies</string>
+
+    <string name="fantastic_videos_textview">War Movies</string>
+
+    <string name="crime_videos_textview">Crime Movies</string>
+
+    <string name="history_videos_textview">History Movies</string>
+
+    <string name="documentary_videos_textview">Documentaries</string>
+
+    <string name="romantic_videos_textview">Romantic Movies</string>
+
+    <string name="movies_info">
+        2020 is unquestionably one of the most challenging years movie theaters ever had to face. The still going global pandemic closed down everything, including my favorite place to spend the most wonderful time. Therefore, the already growing streaming services got a huge bump, earning more and more subscribers during this tough phase in our lives. Netflix has been extremely busy releasing brand-new flicks since the beginning of the year, being The Devil All The Time, I’m Thinking of Ending Things, and Project Power the latest. Some better than others, but I’m still to find a 2020’s original film from the studio that I genuinely dislike. Is Enola Holmes the first one?
+
+Well, no, far from that. With such a talented cast and high production value, a new take on the classic Sherlock Holmes’ mysteries is certainly welcome, and this is one of my top two compliments. Debutant director Harry Bradbeer and Jack Thorne (His Dark Materials) offer a refreshing twist on the famous detective’s stories, not only by focusing on her less popular sister instead but also by delivering a different Sherlock than the one we’re used to seeing. The editing (Adam Bosman), cinematography (Giles Nuttgens), and score (Daniel Pemberton) contribute to quirky, fun, captivating scenes that help the viewer follow Enola’s assessment of several situations, including her thought process (interpretation of clues, formulating plans), most of the times by breaking the fourth wall.
+    </string>
+
+    <string name="movie_comment">In October 2013, we finally added TV. Since we didn\'t want to start with an empty database we opted to bring an intial import of data from Freebase. Freebase is made up of a number of different sources but primarily those from Wikipedia, The TVDb and TV Rage.</string>
+
+    <string name="actor_biography">Keanu Charles Reeves is a Canadian actor. Reeves is known for his roles in Bill and Ted\'s Excellent Adventure, Speed, Point Break, and The Matrix trilogy as Neo. He has collaborated with major directors such as Stephen Frears (in the 1988 period drama Dangerous Liaisons); Gus Van Sant (in the 1991 independent film My Own Private Idaho); and Bernardo Bertolucci (in the 1993 film Little Buddha). Referring to his 1991 film releases, The New York Times\' critic, Janet Maslin, praised Reeves\' versatility, saying that he \"displays considerable discipline and range. He moves easily between the buttoned-down demeanor that suits a police procedural story and the loose-jointed manner of his comic roles.\" A repeated theme in roles he has portrayed is that of saving the world, including the characters of Ted Logan, Buddha, Neo, Johnny Mnemonic, John Constantine and Klaatu.</string>
+
+    <string name="POSTER_BASE_URL">https://image.tmdb.org/t/p/w500</string>
+
+    <string name="average_vote">Average Vote: </string>
+    <string name="main_page_year">Year: </string>
+
+    <string name="movie_info_score"><br>User Score\n</br></string>
+    <string name="movie_info_genre"><br>Category\n</br></string>
+    <string name="movie_info_date"><br>Release Date\n</br></string>
+    <string name="castProfileGenderMan">Man</string>
+    <string name="castProfileGenderWoman">Woman</string>
+    <string name="similar_movies">Similar Movies</string>
+    <string name="read_reviews_about_this_movie">read reviews about this movie</string>
+
+    <string name="top_rated_tv_series">Top Rated Tv Series</string>
+    <string name="go_to_tv_series_info">go to tv serıes ınfo</string>
+
 
 </resources>

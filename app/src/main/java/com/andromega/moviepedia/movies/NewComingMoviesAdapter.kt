@@ -9,9 +9,10 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.circular_recyclerview_layout.view.*
 import kotlinx.android.synthetic.main.movie_recyclerview_layout.view.*
 
-class NewComingMoviesAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class NewComingMoviesAdapter(var movieList: List<NewComingMoviesModelClassNew>, val clickListener: (NewComingMoviesModelClassNew) -> Unit): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
-    private var movies: List<NewComingMoviesModelClass> = ArrayList()
+    private var movies: List<NewComingMoviesModelClassNew> = ArrayList()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         var my_view = LayoutInflater.from(parent.context).inflate(R.layout.movie_recyclerview_layout, parent, false)
@@ -21,7 +22,7 @@ class NewComingMoviesAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
-        (holder as MoviesViewHolder).bind(movies.get(position))
+        (holder as MoviesViewHolder).bind(movies.get(position), clickListener)
 
     }
 
@@ -31,7 +32,7 @@ class NewComingMoviesAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     }
 
-    fun submitList(movieList: List<NewComingMoviesModelClass>){
+    fun submitList(movieList: List<NewComingMoviesModelClassNew>){
         movies = movieList
     }
 
@@ -41,14 +42,17 @@ class NewComingMoviesAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
         val movieName = itemView.textView_movies_layout_movie_name
         val movieIdmb = itemView.textView_movies_layout_idmb
         val movieYear = itemView.textView_movies_layout_year
+        val cardviewMovies = itemView.cardview_movies_layout
 
-        fun bind(newComingMoviesModelClass: NewComingMoviesModelClass){
-            movieName.text = newComingMoviesModelClass.MovieName
-            movieIdmb.text = "IDMB: " + newComingMoviesModelClass.movieIdmb
-            movieYear.text = "YEAR: " + newComingMoviesModelClass.movieYear
-            var pictureUrl = newComingMoviesModelClass.picture
+        fun bind(newComingMoviesModelClass: NewComingMoviesModelClassNew, clickListener: (NewComingMoviesModelClassNew) -> Unit){
+            movieName.text = newComingMoviesModelClass.title
+            movieIdmb.text = itemView.resources.getString(R.string.average_vote) + newComingMoviesModelClass.voteAverage
+            movieYear.text = itemView.resources.getString(R.string.main_page_year) + newComingMoviesModelClass.releaseDate
+            var pictureUrl = "https://image.tmdb.org/t/p/w500" + newComingMoviesModelClass.posterPath
             Picasso.get().load(pictureUrl).into(movieImage)
             //Log.e("pictureUrl", pictureUrl)
+
+            itemView.setOnClickListener { clickListener(newComingMoviesModelClass) }
         }
     }
 }
