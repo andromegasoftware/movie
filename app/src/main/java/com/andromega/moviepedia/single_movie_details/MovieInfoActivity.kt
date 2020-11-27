@@ -33,12 +33,15 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.Serializable
+import java.lang.IndexOutOfBoundsException
+import java.lang.NullPointerException
 
 class MovieInfoActivity : AppCompatActivity() {
 
     var movieYouTubeFragmentId = ""
     var movieId : String = ""
-    lateinit var genre: List<Genre>
+    var genre: List<Genre> = emptyList()
+    var dataPath: String? = ""
 
     var reviewsDetailsList:List<ResultReviewDetailModelClass> = ArrayList()
 
@@ -137,19 +140,24 @@ class MovieInfoActivity : AppCompatActivity() {
 
         val api = retrofit.create(MovieInfoApiInterface::class.java)
 
-        api.fetchAllData(movieId = movieId.toString()).enqueue(object : Callback<MovieDetails> {
+        api.fetchAllData(movieId = movieId).enqueue(object : Callback<MovieDetails> {
             override fun onResponse(call: Call<MovieDetails>, response: Response<MovieDetails>) {
 
                 textViewMovieDetailsTitle.text = response.body()?.title
                 textViewMovieDetailsUserScore.text = getString(R.string.movie_info_score) + response.body()?.voteAverage
                 textViewMovieDetailsYear.text = getString(R.string.movie_info_date) + response.body()?.releaseDate
                 textViewMovieDetailsOverView.text = response.body()?.overview
-                val dataPath: String = response.body()?.posterPath.toString()
+
+
+                dataPath = response.body()?.backDropPath.toString()
                 val moviePosterURL: String = getString(R.string.POSTER_BASE_URL) + dataPath
 
                 genre = response.body()?.genres!!
-                textViewMovieDetailsCategory.text = getString(R.string.movie_info_genre) + genre[0].name
-
+                try {
+                    textViewMovieDetailsCategory.text = getString(R.string.movie_info_genre) + genre[0].name
+                }catch (e:IndexOutOfBoundsException){
+                    textViewMovieDetailsCategory.text = getString(R.string.movie_info_genre)
+                }
 
                 //Log.e("genre: ", genre[0].name)
 

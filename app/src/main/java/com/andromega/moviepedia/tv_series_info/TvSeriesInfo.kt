@@ -32,6 +32,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.Serializable
+import java.lang.IndexOutOfBoundsException
 
 class TvSeriesInfo : AppCompatActivity() {
 
@@ -145,7 +146,12 @@ class TvSeriesInfo : AppCompatActivity() {
                 val moviePosterURL: String = getString(R.string.POSTER_BASE_URL) + dataPath
 
                 genreTv = response.body()?.genres!!
-                textViewTvDetailsCategory.text = getString(R.string.movie_info_genre) + genreTv[0].name.toString()
+                try {
+                    textViewTvDetailsCategory.text = getString(R.string.movie_info_genre) + genreTv[0].name
+                }catch (e: IndexOutOfBoundsException){
+                    textViewTvDetailsCategory.text = getString(R.string.movie_info_genre)
+                }
+
                 //Log.e("genre: ", genre[0].name)
 
                 Picasso.get().load(moviePosterURL).into(imageViewTvDetailsPosterImage)
@@ -210,8 +216,6 @@ class TvSeriesInfo : AppCompatActivity() {
         buttonGotoTvComment.setOnClickListener {
             val intent = Intent(this, TvReviewsActivity::class.java)
             intent.putExtra("tvRevies",  reviewsDetailsList as Serializable)
-            Log.e("revies: ", reviewsDetailsList[0].author)
-            Log.e("revies: ", reviewsDetailsList[0].content)
             startActivity(intent)
         }
 
@@ -237,7 +241,7 @@ class TvSeriesInfo : AppCompatActivity() {
 
     fun similarTvSeriesClickListener(resultTvModelClass: ResultTvModelClass){
         val intent = Intent(this, TvSeriesInfo::class.java)
-        intent.putExtra("movieName", resultTvModelClass.tvSeriesId)
+        intent.putExtra("tvSeriesId", resultTvModelClass.tvSeriesId)
         startActivity(intent)
         finish()
     }

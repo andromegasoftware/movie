@@ -235,6 +235,12 @@ class MoviesFragment : Fragment() {
                 newComingMoviesAdapter.submitList(results)
                 newComingMoviesAdapter.notifyDataSetChanged()
 
+                //randomly puts posters in main poster
+                posterMovieId = results[random].id
+                posterMoviePath = results[random].backdropPath
+                val moviePosterURL: String = resources.getString(R.string.POSTER_BASE_URL) + posterMoviePath
+                Picasso.get().load(moviePosterURL).error(R.drawable.avenger).into(imageViewPosterMovie)
+
             }
 
             override fun onFailure(call: Call<NewComingMoviesMovieList>, t: Throwable) {
@@ -257,12 +263,6 @@ class MoviesFragment : Fragment() {
                 resultsTopRatedMovies = response.body()?.results ?: resultsTopRatedMovies
                 circulerImageAdapter.submitList(resultsTopRatedMovies)
                 circulerImageAdapter.notifyDataSetChanged()
-
-                //randomly puts posters in main poster
-                posterMovieId = resultsTopRatedMovies.get(random).id
-                posterMoviePath = resultsTopRatedMovies.get(random).picturePoster
-                val moviePosterURL: String = getString(R.string.POSTER_BASE_URL) + posterMoviePath
-                Picasso.get().load(moviePosterURL).error(R.drawable.avenger).into(imageViewPosterMovie)
             }
 
             override fun onFailure(call: Call<TopRatedMoviesMovieList>, t: Throwable) {

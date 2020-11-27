@@ -13,7 +13,7 @@ data class MovieDetails(
     val voteAverage: Double,
 
     @SerializedName("backdrop_path")
-    val posterPath: String,
+    val backDropPath: String,
 
     val genres: List<Genre>,
 
@@ -23,9 +23,10 @@ data class MovieDetails(
     @SerializedName("id")
     val movieId: Int,
 
+    @SerializedName("poster_path")
+    val posterImage:String
+
    /* val adult: Boolean,
-    @SerializedName("backdrop_path")
-    val backdropPath: String,
     val budget: Int,
     val homepage: String,
     @SerializedName("imdb_id")

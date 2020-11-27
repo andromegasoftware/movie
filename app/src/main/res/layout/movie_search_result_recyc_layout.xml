@@ -45,7 +45,7 @@
                     android:gravity="center_horizontal"
                     android:text="Avengers Thor Matrix Superman Captain Amerika Spiderman Antman"
                     android:textColor="@android:color/white"
-                    android:textSize="18sp"
+                    android:textSize="24sp"
                     android:textStyle="normal|italic" />
 
                 <TextView
@@ -55,7 +55,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Average Vote: 7"
                     android:textColor="#d6d4e0"
-                    android:textSize="10sp"
+                    android:textSize="14sp"
                     android:textStyle="normal|italic" />
 
                 <TextView
@@ -65,7 +65,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="2019"
                     android:textColor="#d6d4e0"
-                    android:textSize="10sp"
+                    android:textSize="14sp"
                     android:textStyle="normal|italic" />
             </LinearLayout>
 

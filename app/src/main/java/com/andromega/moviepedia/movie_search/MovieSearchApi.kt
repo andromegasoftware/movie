@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface MovieSearchApi {
 
-    @GET("search/multi?api_key=dc92a7524c83f242a3237b2222941f00&language=en-US&query=&page=1&include_adult=false")
+    @GET("search/movie?api_key=dc92a7524c83f242a3237b2222941f00&language=en-US&query=&page=1&include_adult=false")
 
     fun getMoviesAndSeriesAndPeople(@Query("query") queryWord: String): Call<MovieSearchResultsListModelClass>
 }

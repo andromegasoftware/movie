@@ -55,10 +55,26 @@ Well, no, far from that. With such a talented cast and high production value, a 
     <string name="castProfileGenderMan">Man</string>
     <string name="castProfileGenderWoman">Woman</string>
     <string name="similar_movies">Similar Movies</string>
+    <string name="similar_tv_series">Similar Tv Series</string>
     <string name="read_reviews_about_this_movie">read reviews about this movie</string>
 
     <string name="top_rated_tv_series">Top Rated Tv Series</string>
     <string name="go_to_tv_series_info">go to tv serıes ınfo</string>
+    <string name="popular_tv_series">Popular Tv Series</string>
+    <string name="action_tv_series">Action Tv Series</string>
+    <string name="sci_fic_tv_series">Sci-Fic Tv Series</string>
+    <string name="family_tv_series">Family Tv Series</string>
+    <string name="comedy_tv_series">Comedy Tv Series</string>
+    <string name="war_tv_series">War Tv Series</string>
+    <string name="crime_tv_series">Crime Tv Series</string>
+    <string name="western_tv_series">Western Tv Series</string>
+    <string name="documentary_tv_series">Documentary Tv Series</string>
+    <string name="drama_tv_series">Drama Tv Series</string>
+    <string name="toggle_button_movie_search">Movıe</string>
+    <string name="toggle_button_tv_series_search">Tv Serıes</string>
+    <string name="toggle_button_actor_search">Actor</string>
+    <string name="search_bar_hint">Search Movie, Tv or Actor Name</string>
+    <string name="search_bar_hint_textview">Click on Search Icon to Write Key Words and Select one of the Options Below</string>
 
 
 </resources>

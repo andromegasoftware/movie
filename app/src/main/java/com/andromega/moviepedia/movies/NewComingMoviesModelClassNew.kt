@@ -18,10 +18,11 @@ data class NewComingMoviesModelClassNew(
     @SerializedName("vote_average")
     val voteAverage: Double,
 
+    @SerializedName("backdrop_path")
+    val backdropPath: String
+
 
     /*val adult: Boolean,
-    @SerializedName("backdrop_path")
-    val backdropPath: String,
     @SerializedName("belongs_to_collection")
     val belongsToCollection: Any,
     val budget: Int,
