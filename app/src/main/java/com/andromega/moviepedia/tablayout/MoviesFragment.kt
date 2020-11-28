@@ -231,14 +231,14 @@ class MoviesFragment : Fragment() {
                 response: Response<NewComingMoviesMovieList>
             ) {
                 results = response.body()?.results ?: results
-                Log.e("movie", results.get(1).title.toString())
+                Log.e("movie", results[1].title)
                 newComingMoviesAdapter.submitList(results)
                 newComingMoviesAdapter.notifyDataSetChanged()
 
                 //randomly puts posters in main poster
                 posterMovieId = results[random].id
                 posterMoviePath = results[random].backdropPath
-                val moviePosterURL: String = resources.getString(R.string.POSTER_BASE_URL) + posterMoviePath
+                val moviePosterURL: String = getString(R.string.POSTER_BASE_URL) + posterMoviePath
                 Picasso.get().load(moviePosterURL).error(R.drawable.avenger).into(imageViewPosterMovie)
 
             }

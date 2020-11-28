@@ -466,7 +466,7 @@ class TVSeriesFragment : Fragment() {
                 //randomly puts posters in main poster
                 posterMovieId = resultsPopularTvSeries[random].id
                 posterMoviePath = resultsPopularTvSeries[random].picturePoster
-                val moviePosterURL: String = resources.getString(R.string.POSTER_BASE_URL) + posterMoviePath
+                val moviePosterURL: String = getString(R.string.POSTER_BASE_URL) + posterMoviePath
                 Picasso.get().load(moviePosterURL).error(R.drawable.avenger).into(imageView_tv_poster)
             }
 

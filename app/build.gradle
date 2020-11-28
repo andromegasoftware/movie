@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+
 android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -55,6 +56,5 @@ dependencies {
 
     //youtube player api library
     implementation files('libs/YouTubeAndroidPlayerApi')
-
 
 }
